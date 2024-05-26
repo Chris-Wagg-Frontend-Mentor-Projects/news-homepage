@@ -95,5 +95,50 @@ html {
     --fw-bold: 800
 }
 /* grid setup */
+.body-container {
+    display: grid;
+    grid-template: 
+    "main main main aside"
+    "main main main aside"
+    "article article article article"
+    ;
+}
 
 /* utility classes */
+
+.nav-bar__button {
+    text-decoration: none;
+    color: var(--clr-gray-blue);
+}
+.nav-bar__button:hover {
+    color: var(--clr-red);
+}
+
+.main-article {
+    display: grid;
+    grid-area: main;
+}
+
+.aside-container {
+    display: grid;
+    grid-area: aside;
+}
+
+.articles-container {
+    display: grid;
+    grid-area: article;
+}
+
+/* header classes */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 5rem;
+}
+
+.nav-bar {
+    display: flex;
+    gap: 2rem;
+}
+

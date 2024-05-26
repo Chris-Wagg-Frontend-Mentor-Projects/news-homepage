@@ -10,24 +10,24 @@ export default function Home() {
 					<img src='./logo.svg' alt='world news' />
 				</div>
 				<nav className='nav-bar'>
-					<Link href={'/'} className='nav-button'>
+					<Link href={'/'} className='nav-bar__button'>
 						Home
 					</Link>
-					<Link href={'/'} className='nav-button'>
+					<Link href={'/'} className='nav-bar__button'>
 						New
 					</Link>
-					<Link href={'/'} className='nav-button'>
+					<Link href={'/'} className='nav-bar__button'>
 						Popular
 					</Link>
-					<Link href={'/'} className='nav-button'>
+					<Link href={'/'} className='nav-bar__button'>
 						Trending
 					</Link>
-					<Link href={'/'} className='nav-button'>
+					<Link href={'/'} className='nav-bar__button'>
 						Categories
 					</Link>
 				</nav>
 			</header>
-			<body>
+			<section className='body-container'>
 				<main className='main-article'>
 					<img
 						src='./image-web-3-desktop.jpg'
@@ -47,7 +47,7 @@ export default function Home() {
 						<button className='read-more-button'>READ MORE</button>
 					</div>
 				</main>
-				<aside className='aside'>
+				<aside className='aside-container'>
 					<h2 className='aside__title'>New</h2>
 					<AsideCard
 						title={`Hydrogen VS Electric Cars`}
@@ -62,7 +62,7 @@ export default function Home() {
 						text={`Private funding by VC firms is down 50% YOY. We take a look at what that means.`}
 					/>
 				</aside>
-				<section className='articles'>
+				<section className='articles-container'>
 					<ArticleCard
 						// TODO: do thhe article alts
 						articleImage='image-retro-pcs'
@@ -86,7 +86,7 @@ export default function Home() {
 						text='How the pandemic has sparked fresh opportunities.'
 					/>
 				</section>
-			</body>
+			</section>
 		</>
 	)
 }
