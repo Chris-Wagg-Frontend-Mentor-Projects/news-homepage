@@ -1,0 +1,99 @@
+/* css reset from https://piccalil.li/blog/a-more-modern-css-reset/ */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+/* Prevent font size inflation */
+html {
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+}
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin-block-end: 0;
+}
+/* Set core body defaults */
+body {
+	line-height: 1.5;
+	margin: 0;
+	min-height: 100vh;
+}
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+	line-height: 1.1;
+}
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+	text-wrap: balance;
+}
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	color: currentColor;
+	text-decoration-skip-ink: auto;
+}
+/* Make images easier to work with */
+img,
+picture {
+	display: block;
+	max-width: 100%;
+}
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+textarea {
+	resize: none;
+}
+/* Scroll behaviours */
+html {
+	scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion) {
+	html {
+		scroll-behavior: reduce;
+	}
+}
+
+/* custom properties */
+:root {
+	/* --clr-background: hsl(115, 45%, 32%); */
+	--clr-soft-orange: hsl(35, 77%, 62%);
+	--clr-red: hsl(5, 85%, 63%);
+	--clr-off-white: hsl(36, 100%, 99%);
+    --clr-gray-blue: hsl(233, 8%, 79%)
+    --clr-dark-gray-blue: hsl(236, 13%, 42%)
+    --clr-very-dark-blue: hsl(240, 100%, 5%)
+
+    --fs-paragraph: 0.938rem
+
+    --fw-light: 400
+    --fw-med: 700
+    --fw-bold: 800
+}
+/* grid setup */
+
+/* utility classes */
