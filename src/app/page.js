@@ -1,33 +1,28 @@
+'use client'
+
 import Link from 'next/link'
 import AsideCard from './components/AsideCard'
 import ArticleCard from './components/ArticleCard'
+import React, { useState, useEffect } from 'react'
+
+import DesktopNav from './components/DesktopNav'
+import MobileNav from './components/MobileNav'
 
 export default function Home() {
+	useEffect(() => {
+		let openMenuBtn = document.getElementById('openMenuBtn')
+	}, [])
 	return (
 		<>
 			<header className='header'>
+				{/* TODO: maybe use a modal or a dialogue for side menu for accessibility */}
 				<div>
 					<img src='./logo.svg' alt='world news' />
 				</div>
-				<nav className='nav-bar'>
-					<Link href={'/'} className='nav-bar__button'>
-						Home
-					</Link>
-					<Link href={'/'} className='nav-bar__button'>
-						New
-					</Link>
-					<Link href={'/'} className='nav-bar__button'>
-						Popular
-					</Link>
-					<Link href={'/'} className='nav-bar__button'>
-						Trending
-					</Link>
-					<Link href={'/'} className='nav-bar__button'>
-						Categories
-					</Link>
-				</nav>
+				<DesktopNav />
+				<MobileNav />
 			</header>
-			<section className='body-container'>
+			{/* <section className='body-container'>
 				<main className='main-article'>
 					<img
 						src='./image-web-3-desktop.jpg'
@@ -86,7 +81,7 @@ export default function Home() {
 						text='How the pandemic has sparked fresh opportunities.'
 					/>
 				</section>
-			</section>
+			</section> */}
 		</>
 	)
 }

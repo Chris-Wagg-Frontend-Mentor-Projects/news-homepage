@@ -137,8 +137,30 @@ html {
     margin: 5rem;
 }
 
-.nav-bar {
-    display: flex;
+.nav-bar--desktop {
+    display: flex;  
     gap: 2rem;
+
 }
 
+/* mobile nav */
+.nav-bar--mobile {
+    display: none;
+}
+
+.menu-button {
+    display: none;
+}
+
+/* media queries */
+
+/* @media (min-width: 801px) {
+    .--mobile {
+        display: hidden;
+    }
+} */ 
+
+@media (max-width: 800px) {
+    
+    
+}
