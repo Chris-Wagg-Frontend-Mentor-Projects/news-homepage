@@ -1,17 +1,13 @@
-'use client'
+// 'use client'
 
 import Link from 'next/link'
 import AsideCard from './components/AsideCard'
 import ArticleCard from './components/ArticleCard'
-import React, { useState, useEffect } from 'react'
 
 import DesktopNav from './components/DesktopNav'
 import MobileNav from './components/MobileNav'
 
 export default function Home() {
-	useEffect(() => {
-		let openMenuBtn = document.getElementById('openMenuBtn')
-	}, [])
 	return (
 		<>
 			<header className='header'>
@@ -20,7 +16,7 @@ export default function Home() {
 					<img src='./logo.svg' alt='world news' />
 				</div>
 				<DesktopNav />
-				<MobileNav />
+				{/* <MobileNav /> */}
 			</header>
 			{/* <section className='body-container'>
 				<main className='main-article'>

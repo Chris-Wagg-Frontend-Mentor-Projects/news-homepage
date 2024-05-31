@@ -143,24 +143,41 @@ html {
 
 }
 
-/* mobile nav */
-.nav-bar--mobile {
+/* desktop nav */
+
+.hamburger-btn {
     display: none;
 }
 
-.menu-button {
+/* mobile nav */
+
+.nav-bar--mobile {
     display: none;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: red;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
 }
 
 /* media queries */
 
-/* @media (min-width: 801px) {
-    .--mobile {
-        display: hidden;
-    }
-} */ 
-
 @media (max-width: 800px) {
+    .nav-bar__button--desktop {
+        display: none;      
+    }
+
+    .hamburger-btn {
+        display: block;
+    }
+
+    /* .nav-bar--mobile {
+        display: flex;
+    } */
     
-    
+   
 }
