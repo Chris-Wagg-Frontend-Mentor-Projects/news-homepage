@@ -4,10 +4,8 @@ import Link from 'next/link'
 import React, { useState, useEffect } from 'react'
 
 export default function DesktopNav() {
-	const [openButton, setOpenButton] = useState()
-	const [closeButton, setCloseButton] = useState()
-
-	// TODO: fix the booleans to make sure the navs can be open and closed more than once
+	const [isOpen, setIsOpen] = useState()
+	const [isClosed, setIsClosed] = useState()
 
 	useEffect(() => {
 		let openMenuBtn = document.getElementById('openMenuBtn')
@@ -15,28 +13,37 @@ export default function DesktopNav() {
 		let closeMenuBtn = document.getElementById('closeMenuBtn')
 
 		function openMobileNav() {
-			console.log('open the menu')
+			console.log('open button pressed')
 			mobileNav.style.display = 'flex'
 			openMenuBtn.style.display = 'none'
 			closeMenuBtn.style.display = 'flex'
-			setOpenButton(false)
+			setIsOpen(true)
+			setIsClosed(false)
 		}
 
-		if (openButton === true) {
+		if (isOpen === true) {
 			openMobileNav()
 		}
+	}, [isOpen])
+
+	useEffect(() => {
+		let openMenuBtn = document.getElementById('openMenuBtn')
+		let mobileNav = document.getElementById('mobileNav')
+		let closeMenuBtn = document.getElementById('closeMenuBtn')
 
 		function closeMobileNav() {
 			console.log('close button pressed')
 			mobileNav.style.display = 'none'
 			openMenuBtn.style.display = 'block'
 			closeMenuBtn.style.display = 'none'
+			setIsOpen(false)
+			setIsClosed(true)
 		}
 
-		if (closeButton === true) {
+		if (isClosed === true) {
 			closeMobileNav()
 		}
-	}, [openButton, closeButton])
+	}, [isClosed])
 	return (
 		<>
 			<div>
@@ -59,7 +66,7 @@ export default function DesktopNav() {
 					<button
 						className='hamburger-btn'
 						id='openMenuBtn'
-						onClick={() => setOpenButton(true)}>
+						onClick={() => setIsOpen(true)}>
 						<img src='hamburgerIcon.svg' alt='open menu' />
 					</button>
 				</nav>
@@ -69,7 +76,7 @@ export default function DesktopNav() {
 					<button
 						className='close-button'
 						id='closeMenuBtn'
-						onClick={() => setCloseButton(true)}>
+						onClick={() => setIsClosed(true)}>
 						<img src='closeIcon.svg' alt='close menu' />
 					</button>
 
