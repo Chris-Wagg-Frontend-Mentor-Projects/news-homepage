@@ -45,57 +45,54 @@ export default function DesktopNav() {
 	}, [isClosed])
 	return (
 		<>
-			<div>
-				<nav className='nav-bar--desktop'>
-					<Link href={'/'} className='nav-bar__button--desktop'>
-						Home
-					</Link>
-					<Link href={'/'} className='nav-bar__button--desktop'>
-						New
-					</Link>
-					<Link href={'/'} className='nav-bar__button--desktop'>
-						Popular
-					</Link>
-					<Link href={'/'} className='nav-bar__button--desktop'>
-						Trending
-					</Link>
-					<Link href={'/'} className='nav-bar__button--desktop'>
-						Categories
-					</Link>
-					<button
-						className='hamburger-btn'
-						id='openMenuBtn'
-						onClick={() => setIsOpen(true)}>
-						<img src='hamburgerIcon.svg' alt='open menu' />
-					</button>
-				</nav>
-			</div>
-			<div>
-				<nav className='nav-bar--mobile' id='mobileNav'>
-					<button
-						className='close-button'
-						id='closeMenuBtn'
-						onClick={() => setIsClosed(true)}>
-						<img src='closeIcon.svg' alt='close menu' />
-					</button>
+			<nav className='nav-bar--desktop'>
+				<Link href={'/'} className='nav-bar__button--desktop'>
+					Home
+				</Link>
+				<Link href={'/'} className='nav-bar__button--desktop'>
+					New
+				</Link>
+				<Link href={'/'} className='nav-bar__button--desktop'>
+					Popular
+				</Link>
+				<Link href={'/'} className='nav-bar__button--desktop'>
+					Trending
+				</Link>
+				<Link href={'/'} className='nav-bar__button--desktop'>
+					Categories
+				</Link>
+				<button
+					className='hamburger-btn'
+					id='openMenuBtn'
+					onClick={() => setIsOpen(true)}>
+					<img src='hamburgerIcon.svg' alt='open menu' />
+				</button>
+			</nav>
 
-					<Link href={'/'} className='nav-bar__button--mobile'>
-						Home
-					</Link>
-					<Link href={'/'} className='nav-bar__button--mobile'>
-						New
-					</Link>
-					<Link href={'/'} className='nav-bar__button--mobile'>
-						Popular
-					</Link>
-					<Link href={'/'} className='nav-bar__button--mobile'>
-						Trending
-					</Link>
-					<Link href={'/'} className='nav-bar__button--mobile'>
-						Categories
-					</Link>
-				</nav>
-			</div>
+			<nav className='nav-bar--mobile' id='mobileNav'>
+				<button
+					className='close-button'
+					id='closeMenuBtn'
+					onClick={() => setIsClosed(true)}>
+					<img src='closeIcon.svg' alt='close menu' />
+				</button>
+
+				<Link href={'/'} className='nav-bar__button--mobile'>
+					Home
+				</Link>
+				<Link href={'/'} className='nav-bar__button--mobile'>
+					New
+				</Link>
+				<Link href={'/'} className='nav-bar__button--mobile'>
+					Popular
+				</Link>
+				<Link href={'/'} className='nav-bar__button--mobile'>
+					Trending
+				</Link>
+				<Link href={'/'} className='nav-bar__button--mobile'>
+					Categories
+				</Link>
+			</nav>
 		</>
 	)
 }

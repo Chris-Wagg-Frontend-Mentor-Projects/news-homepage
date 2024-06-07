@@ -134,12 +134,13 @@ html {
 .header {
     display: flex;
     justify-content: space-between;
-    margin: 5rem;
+    margin: 3rem 5rem;
 }
 
 .nav-bar--desktop {
     display: flex;  
     gap: 2rem;
+    align-items: center;
 
 }
 
@@ -147,6 +148,14 @@ html {
 
 .hamburger-btn {
     display: none;
+}
+
+.nav-bar__button--desktop {
+    text-decoration: none;
+}
+
+.nav-bar__button--desktop:hover {
+    color: var(--clr-red);
 }
 
 /* mobile nav */
