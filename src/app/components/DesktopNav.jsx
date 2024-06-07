@@ -65,7 +65,7 @@ export default function DesktopNav() {
 					className='hamburger-btn'
 					id='openMenuBtn'
 					onClick={() => setIsOpen(true)}>
-					<img src='hamburgerIcon.svg' alt='open menu' />
+					<img src='icon-menu.svg' alt='open menu' />
 				</button>
 			</nav>
 
@@ -74,7 +74,7 @@ export default function DesktopNav() {
 					className='close-button'
 					id='closeMenuBtn'
 					onClick={() => setIsClosed(true)}>
-					<img src='closeIcon.svg' alt='close menu' />
+					<img src='icon-menu-close.svg' alt='close menu' />
 				</button>
 
 				<Link href={'/'} className='nav-bar__button--mobile'>
