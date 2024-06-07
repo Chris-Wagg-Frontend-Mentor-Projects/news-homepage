@@ -34,7 +34,6 @@ export default function DesktopNav() {
 		function closeMobileNav() {
 			console.log('close button pressed')
 			mobileNav.style.display = 'none'
-			openMenuBtn.style.display = 'block'
 			closeMenuBtn.style.display = 'none'
 			setIsOpen(false)
 			setIsClosed(true)

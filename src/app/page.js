@@ -1,24 +1,17 @@
-// 'use client'
-
-import Link from 'next/link'
 import AsideCard from './components/AsideCard'
 import ArticleCard from './components/ArticleCard'
-
 import DesktopNav from './components/DesktopNav'
-import MobileNav from './components/MobileNav'
 
 export default function Home() {
 	return (
 		<>
 			<header className='header'>
-				{/* TODO: maybe use a modal or a dialogue for side menu for accessibility */}
 				<div>
 					<img src='./logo.svg' alt='world news' />
 				</div>
 				<DesktopNav />
-				{/* <MobileNav /> */}
 			</header>
-			{/* <section className='body-container'>
+			<section className='body-container'>
 				<main className='main-article'>
 					<img
 						src='./image-web-3-desktop.jpg'
@@ -77,7 +70,7 @@ export default function Home() {
 						text='How the pandemic has sparked fresh opportunities.'
 					/>
 				</section>
-			</section> */}
+			</section>
 		</>
 	)
 }
