@@ -148,6 +148,8 @@ html {
 
 .hamburger-btn {
     display: none;
+    background: none;
+    border: none;
 }
 
 .nav-bar__button--desktop {
@@ -161,7 +163,7 @@ html {
 /* mobile nav */
 
 .nav-bar--mobile {
-    display: none;
+    /* display: flex; */
     flex-direction: column;
     gap: 2rem;
     background-color: red;
