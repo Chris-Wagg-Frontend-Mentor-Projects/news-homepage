@@ -157,12 +157,9 @@ html {
 }
 
 /* mobile nav */
-.nav-bar--mobile {
-	animation: vanish 1s ease-in-out;
-}
 
+.nav-bar--mobile,
 :popover-open {
-	display: flex;
 	flex-direction: column;
 	gap: 2rem;
 	position: fixed;
@@ -175,9 +172,43 @@ html {
 	border: 0;
 }
 
+.nav-bar--mobile {
+	animation: vanish 0.3s;
+	display: none;
+}
+
+:popover-open {
+	animation: appear 0.3s;
+	display: flex;
+}
+
 :popover-open::backdrop {
 	background-color: black;
-	opacity: 0.3;
+	opacity: 0.2;
+}
+
+@keyframes appear {
+	from {
+		transform: translateX(+250px);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes vanish {
+	from {
+		transform: translateX(0px);
+		display: flex;
+		opacity: 1;
+	}
+	to {
+		transform: translateX(+250px);
+		display: none;
+		opacity: 0;
+	}
 }
 
 .close-button {
