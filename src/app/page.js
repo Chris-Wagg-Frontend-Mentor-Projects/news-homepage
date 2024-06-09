@@ -18,17 +18,21 @@ export default function Home() {
 						alt='article image'
 						className='main-article__image'
 					/>
-					<h1 className='main-article__headline'>
-						The Bright Future of Web 3.0?
-					</h1>
-					<div className='main-article__descrpition'>
-						<p>
-							We dive into the next evolution of the web that
-							claims to put the power of the platforms back into
-							the hands of the people. But is it really fulfilling
-							its promise?
-						</p>
-						<button className='read-more-button'>READ MORE</button>
+					<div className='main-article-wrapper'>
+						<h1 className='main-article__headline'>
+							The Bright Future of Web 3.0?
+						</h1>
+						<div className='main-article__descrpition'>
+							<p>
+								We dive into the next evolution of the web that
+								claims to put the power of the platforms back
+								into the hands of the people. But is it really
+								fulfilling its promise?
+							</p>
+							<button className='read-more-button'>
+								READ MORE
+							</button>
+						</div>
 					</div>
 				</main>
 				<aside className='aside-container'>
