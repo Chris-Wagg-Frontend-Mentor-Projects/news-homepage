@@ -96,9 +96,9 @@ html {
 .body-container {
 	display: grid;
 	grid-template:
-		'main main main aside'
-		'main main main aside'
-		'article article article article';
+		'main main aside'
+		'main main aside'
+		'article article article';
 }
 
 /* utility classes */
@@ -112,17 +112,14 @@ html {
 }
 
 .main-article {
-	display: grid;
 	grid-area: main;
 }
 
 .aside-container {
-	display: grid;
 	grid-area: aside;
 }
 
 .articles-container {
-	display: grid;
 	grid-area: article;
 }
 
@@ -196,13 +193,17 @@ html {
 
 .nav-bar__button--mobile {
 	text-decoration: none;
-	color: black;
+	color: var(--clr-very-dark-blue);
 	margin: 0 1rem;
-	font-size: 20px;
+	font-size: 1.25rem;
 	font-weight: var(--fw-light);
 }
 
 /* main article */
+
+.main-article {
+	margin: 0 2rem 0 5rem;
+}
 
 .main-article-wrapper {
 	display: grid;
@@ -225,11 +226,64 @@ html {
 	width: fit-content;
 	padding: 0.5rem 2rem;
 	border: 0;
-	background-color: var(--clr-very-dark-blue);
-	color: var(--clr-off-white);
+	background-color: var(--clr-red);
+	color: var(--clr-very-dark-blue);
 	letter-spacing: 3px;
+	transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+	font-weight: var(--fw-med);
 }
 
+.read-more-button:hover {
+	background-color: var(--clr-very-dark-blue);
+	color: var(--clr-off-white);
+}
+
+/* aside */
+
+.aside-container {
+	background-color: var(--clr-very-dark-blue);
+	padding: 0 1rem;
+	margin-right: 5rem;
+	display: grid;
+}
+
+.aside__title {
+	color: var(--clr-soft-orange);
+	font-weight: var(--fw-med);
+	font-size: 3rem;
+	align-self: center;
+	margin-top: 1rem;
+	margin-left: 1rem;
+}
+
+.aside-card {
+	border-bottom: 1px solid var(--clr-gray-blue);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1rem;
+}
+
+.aside-card:last-of-type {
+	border-bottom: 0;
+}
+
+.aside-card__title {
+	color: white;
+	font-size: 1.5rem;
+	text-decoration: none;
+	font-weight: var(--fw-med);
+	transition: color 0.15s ease-in-out;
+}
+
+.aside-card__title:hover {
+	color: var(--clr-soft-orange);
+}
+.aside-card__text {
+	color: var(--clr-gray-blue);
+	font-size: var(--fs-paragraph);
+	margin-top: 0;
+}
 /* media queries */
 
 @media (max-width: 800px) {

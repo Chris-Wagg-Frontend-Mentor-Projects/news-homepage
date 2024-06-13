@@ -1,8 +1,12 @@
+import Link from 'next/link'
+
 export default function AsideCard(props) {
 	const { title, text } = props
 	return (
 		<article className='aside-card'>
-			<h3 className='aside-card__title'>{title}</h3>
+			<Link href='/' className='aside-card__title'>
+				{title}
+			</Link>
 			<p className='aside-card__text'>{text}</p>
 		</article>
 	)
