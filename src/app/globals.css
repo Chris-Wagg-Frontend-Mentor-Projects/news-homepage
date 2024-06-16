@@ -96,10 +96,10 @@ html {
 /* grid setup */
 .body-container {
 	display: grid;
-	grid-template:
-		'main main aside'
-		'main main aside'
-		'article article article';
+
+	grid-template-columns: [main-start] 2fr [main-end aside-start] 1fr [aside-end];
+
+	grid-template-rows: [section-one-start]auto[section-one-end section-two-start]auto[section-two-end];
 }
 
 /* utility classes */
@@ -113,15 +113,18 @@ html {
 }
 
 .main-article {
-	grid-area: main;
+	grid-column: main-start / main-end;
+	grid-row: section-one-start / section-one-end;
 }
 
 .aside-container {
-	grid-area: aside;
+	grid-column: aside-start / aside-end;
+	grid-row: section-one-start / section-one-end;
 }
 
 .articles-container {
-	grid-area: article;
+	grid-column: main-start / aide-end;
+	grid-row: section-two-start / section-two-end;
 }
 
 /* header classes */
@@ -308,7 +311,7 @@ html {
 }
 
 .article-card > img {
-	max-height: 150px;
+	/* max-height: 125px; */
 	margin-right: 1.5rem;
 }
 
