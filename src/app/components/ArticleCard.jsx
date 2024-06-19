@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function ArticleCard(props) {
 	const { articleImage, articleAlt, articleNumber, title, text } = props
 	return (
@@ -9,7 +11,9 @@ export default function ArticleCard(props) {
 			/>
 			<div className='article-card__text-container'>
 				<h2 className='article-card__number'>{articleNumber}</h2>
-				<h3 className='article-card__title'>{title}</h3>
+				<Link href='/' className='article-card__title'>
+					{title}
+				</Link>
 				<p className='article-card__text'>{text}</p>
 			</div>
 		</article>
