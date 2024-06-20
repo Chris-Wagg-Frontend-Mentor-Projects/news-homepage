@@ -10,7 +10,7 @@ export default function ArticleCard(props) {
 				className='article-card__image'
 			/>
 			<div className='article-card__text-container'>
-				<h2 className='article-card__number'>{articleNumber}</h2>
+				<h3 className='article-card__number'>{articleNumber}</h3>
 				<Link href='/' className='article-card__title'>
 					{title}
 				</Link>

@@ -68,13 +68,20 @@ select {
 textarea {
 	resize: none;
 }
-/* Scroll behaviours */
+/* Scroll behaviours and animations */
 html {
 	scroll-behavior: smooth;
 }
 @media (prefers-reduced-motion) {
 	html {
 		scroll-behavior: reduce;
+	}
+	.nav-bar--mobile {
+		animation: none;
+	}
+
+	:popover-open {
+		animation: none;
 	}
 }
 

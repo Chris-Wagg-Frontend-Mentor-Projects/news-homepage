@@ -2,13 +2,13 @@ import AsideCard from './components/AsideCard'
 import ArticleCard from './components/ArticleCard'
 import DesktopNav from './components/DesktopNav'
 
+// TODO: check accessibility of mobile menu and make sure focus is doing the right thing
+
 export default function Home() {
 	return (
 		<>
 			<header className='header'>
-				<div>
-					<img src='./logo.svg' alt='world news' />
-				</div>
+				<img src='./logo.svg' alt='world news' />
 				<DesktopNav />
 			</header>
 			<section className='body-container'>
