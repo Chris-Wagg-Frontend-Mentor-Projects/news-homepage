@@ -19,18 +19,6 @@ export default function DesktopNav() {
 			mobileMenu.close()
 		})
 
-		// popover.addEventListener('toggle', (e) => {
-		// 	if (e.newState === 'open') {
-		// 		console.log('popover is open')
-		// 		body.setAttribute('inert', 'inert')
-		// 		// openBtn.setAttribute('inert', 'inert')
-		// 	} else if (e.newState === 'closed') {
-		// 		console.log('popover is closed')
-		// 		body.removeAttribute('inert')
-		// 		// openBtn.removeAttribute('inert', 'inert')
-		// 	}
-		// })
-
 		console.log(isMenuOpen)
 	}, [isMenuOpen])
 

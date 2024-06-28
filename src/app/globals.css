@@ -201,9 +201,6 @@ dialog[open] {
 	opacity: 0.2;
 }
 
-/* TODO: find a way to focus lock the popover so you can't tab away  */
-/* TODO: add an inert property to the sections behind the mobile nav when its open to lock the focus? */
-
 .close-button {
 	align-self: flex-end;
 	background: 0;
