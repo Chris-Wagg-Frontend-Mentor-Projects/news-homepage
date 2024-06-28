@@ -169,8 +169,11 @@ html {
 
 /* mobile nav */
 
-.nav-bar--mobile,
-:popover-open {
+dialog[open] {
+	display: flex;
+}
+
+.nav-bar--mobile {
 	flex-direction: column;
 	gap: 2rem;
 	position: fixed;
@@ -198,11 +201,19 @@ html {
 	opacity: 0.2;
 }
 
+/* TODO: find a way to focus lock the popover so you can't tab away  */
+/* TODO: add an inert property to the sections behind the mobile nav when its open to lock the focus? */
+
 .close-button {
 	align-self: flex-end;
 	background: 0;
 	border: 0;
 	margin: 1rem;
+	background-image: url('../../public/icon-menu-close.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 3rem;
+	height: 3rem;
 }
 
 .nav-bar__button--mobile {
@@ -365,6 +376,11 @@ html {
 
 	.hamburger-btn {
 		display: block;
+		background-image: url('../../public/icon-menu.svg');
+		background-position: center;
+		background-repeat: no-repeat;
+		width: 3rem;
+		height: 3rem;
 	}
 }
 
@@ -425,7 +441,7 @@ html {
 
 /* Animations */
 
-@keyframes appear {
+/* @keyframes appear {
 	from {
 		transform: translateX(+250px);
 		opacity: 0;
@@ -447,4 +463,4 @@ html {
 		display: none;
 		opacity: 0;
 	}
-}
+} */

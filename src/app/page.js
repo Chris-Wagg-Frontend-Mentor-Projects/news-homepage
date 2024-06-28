@@ -2,20 +2,18 @@ import AsideCard from './components/AsideCard'
 import ArticleCard from './components/ArticleCard'
 import DesktopNav from './components/DesktopNav'
 
-// TODO: check accessibility of mobile menu and make sure focus is doing the right thing
-
 export default function Home() {
 	return (
 		<>
 			<header className='header'>
-				<img src='./logo.svg' alt='world news' />
+				<img src='./logo.svg' alt='' />
 				<DesktopNav />
 			</header>
-			<section className='body-container'>
+			<section className='body-container' id='body-container'>
 				<main className='main-article'>
 					<img
 						src='./image-web-3-desktop.jpg'
-						alt='article image'
+						alt=''
 						className='main-article__image'
 					/>
 					<div className='main-article-wrapper'>
@@ -52,23 +50,22 @@ export default function Home() {
 				</aside>
 				<section className='articles-container'>
 					<ArticleCard
-						// TODO: do thhe article alts
 						articleImage='image-retro-pcs'
-						articleAlt='article image'
+						articleAlt=''
 						articleNumber='01'
 						title='Reviving Retro PCs'
 						text='What happens when old PCs are given modern upgrades?'
 					/>
 					<ArticleCard
 						articleImage='image-top-laptops'
-						articleAlt='article image'
+						articleAlt=''
 						articleNumber='02'
 						title='Top 10 Laptops of 2022'
 						text='Our best picks for various needs and budgets.'
 					/>
 					<ArticleCard
 						articleImage='image-gaming-growth'
-						articleAlt='article image'
+						articleAlt=''
 						articleNumber='03'
 						title='The Growth of Gaming'
 						text='How the pandemic has sparked fresh opportunities.'

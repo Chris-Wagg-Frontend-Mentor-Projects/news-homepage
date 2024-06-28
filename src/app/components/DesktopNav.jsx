@@ -1,9 +1,46 @@
 'use client'
 
 import Link from 'next/link'
-import React from 'react'
+import { React, useState, useEffect } from 'react'
 
 export default function DesktopNav() {
+	const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+	useEffect(() => {
+		const body = document.getElementById('body-container')
+		const mobileMenu = document.querySelector('dialog')
+		const openBtn = document.getElementById('open-menu-btn')
+		const closeBtn = document.getElementById('close-menu-btn')
+
+		openBtn.addEventListener('click', () => {
+			mobileMenu.showModal()
+		})
+		closeBtn.addEventListener('click', () => {
+			mobileMenu.close()
+		})
+
+		// popover.addEventListener('toggle', (e) => {
+		// 	if (e.newState === 'open') {
+		// 		console.log('popover is open')
+		// 		body.setAttribute('inert', 'inert')
+		// 		// openBtn.setAttribute('inert', 'inert')
+		// 	} else if (e.newState === 'closed') {
+		// 		console.log('popover is closed')
+		// 		body.removeAttribute('inert')
+		// 		// openBtn.removeAttribute('inert', 'inert')
+		// 	}
+		// })
+
+		console.log(isMenuOpen)
+	}, [isMenuOpen])
+
+	function checkMenuOpen() {
+		setIsMenuOpen(true)
+	}
+	function checkMenuClosed() {
+		setIsMenuOpen(false)
+	}
+
 	return (
 		<>
 			<nav className='nav-bar--desktop'>
@@ -25,20 +62,17 @@ export default function DesktopNav() {
 
 				<button
 					className='hamburger-btn'
-					popovertarget='popoverMobileNav'>
-					<img src='icon-menu.svg' alt='open menu' />
-				</button>
+					id='open-menu-btn'
+					// onClick={checkMenuOpen}
+				></button>
 			</nav>
 
-			<nav
-				className='nav-bar--mobile'
-				popover='auto'
-				id='popoverMobileNav'>
+			<dialog className='nav-bar--mobile'>
 				<button
+					id='close-menu-btn'
 					className='close-button'
-					popovertarget='popoverMobileNav'>
-					<img src='icon-menu-close.svg' alt='close menu' />
-				</button>
+					// onClick={checkMenuClosed}
+				></button>
 
 				<Link href={'/'} className='nav-bar__button--mobile'>
 					Home
@@ -55,7 +89,7 @@ export default function DesktopNav() {
 				<Link href={'/'} className='nav-bar__button--mobile'>
 					Categories
 				</Link>
-			</nav>
+			</dialog>
 		</>
 	)
 }
