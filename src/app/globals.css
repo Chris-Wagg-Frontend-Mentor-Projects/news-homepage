@@ -76,13 +76,6 @@ html {
 	html {
 		scroll-behavior: reduce;
 	}
-	.nav-bar--mobile {
-		animation: none;
-	}
-
-	:popover-open {
-		animation: none;
-	}
 }
 
 /* custom properties */
@@ -173,6 +166,18 @@ dialog[open] {
 	display: flex;
 }
 
+dialog {
+	animation: vanish 0.3s ease-out;
+}
+
+dialog[open] {
+	animation: appear 0.3s ease-out;
+}
+
+dialog[open]::backdrop {
+	animation: backdrop-fade-in 0.3s ease-out forwards;
+}
+
 .nav-bar--mobile {
 	flex-direction: column;
 	gap: 2rem;
@@ -184,21 +189,6 @@ dialog[open] {
 	height: 100vh;
 	width: 250px;
 	border: 0;
-}
-
-.nav-bar--mobile {
-	animation: vanish 0.3s;
-	display: none;
-}
-
-:popover-open {
-	animation: appear 0.3s;
-	display: flex;
-}
-
-:popover-open::backdrop {
-	background-color: black;
-	opacity: 0.2;
 }
 
 .close-button {
@@ -436,9 +426,9 @@ dialog[open] {
 	}
 }
 
-/* Animations */
+/* Keyframes for animations */
 
-/* @keyframes appear {
+@keyframes appear {
 	from {
 		transform: translateX(+250px);
 		opacity: 0;
@@ -460,4 +450,14 @@ dialog[open] {
 		display: none;
 		opacity: 0;
 	}
-} */
+}
+
+@keyframes backdrop-fade-in {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}

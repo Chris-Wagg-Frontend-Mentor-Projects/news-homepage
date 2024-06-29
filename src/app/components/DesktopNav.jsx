@@ -7,7 +7,6 @@ export default function DesktopNav() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
 
 	useEffect(() => {
-		const body = document.getElementById('body-container')
 		const mobileMenu = document.querySelector('dialog')
 		const openBtn = document.getElementById('open-menu-btn')
 		const closeBtn = document.getElementById('close-menu-btn')
@@ -19,7 +18,11 @@ export default function DesktopNav() {
 			mobileMenu.close()
 		})
 
-		console.log(isMenuOpen)
+		if (isMenuOpen === true) {
+			document.body.style.overflow = 'hidden'
+		} else if (isMenuOpen === false) {
+			document.body.style.overflow = 'scroll'
+		}
 	}, [isMenuOpen])
 
 	function checkMenuOpen() {
@@ -51,16 +54,14 @@ export default function DesktopNav() {
 				<button
 					className='hamburger-btn'
 					id='open-menu-btn'
-					// onClick={checkMenuOpen}
-				></button>
+					onClick={checkMenuOpen}></button>
 			</nav>
 
 			<dialog className='nav-bar--mobile'>
 				<button
 					id='close-menu-btn'
 					className='close-button'
-					// onClick={checkMenuClosed}
-				></button>
+					onClick={checkMenuClosed}></button>
 
 				<Link href={'/'} className='nav-bar__button--mobile'>
 					Home
