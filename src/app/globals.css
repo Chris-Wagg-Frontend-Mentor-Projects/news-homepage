@@ -203,7 +203,7 @@ dialog[open]::backdrop {
 	height: 3rem;
 }
 
-.nav-bar__button--mobile {
+.nav-bar__mobile-button {
 	text-decoration: none;
 	color: var(--clr-very-dark-blue);
 	margin: 0 1rem;

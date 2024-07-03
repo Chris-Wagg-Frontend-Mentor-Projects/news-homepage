@@ -8,8 +8,8 @@ export default function DesktopNav() {
 
 	useEffect(() => {
 		const mobileMenu = document.querySelector('dialog')
-		const openBtn = document.getElementById('open-menu-btn')
-		const closeBtn = document.getElementById('close-menu-btn')
+		const openBtn = document.querySelector('.hamburger-btn')
+		const closeBtn = document.querySelector('.close-button')
 
 		openBtn.addEventListener('click', () => {
 			mobileMenu.showModal()
@@ -19,9 +19,11 @@ export default function DesktopNav() {
 		})
 
 		if (isMenuOpen === true) {
-			document.body.style.overflow = 'hidden'
+			document.body.style.overflow = 'hidden visible'
+			// openBtn.focus()
 		} else if (isMenuOpen === false) {
 			document.body.style.overflow = 'scroll'
+			// closeBtn.focus()
 		}
 	}, [isMenuOpen])
 
@@ -53,29 +55,26 @@ export default function DesktopNav() {
 
 				<button
 					className='hamburger-btn'
-					id='open-menu-btn'
 					onClick={checkMenuOpen}></button>
 			</nav>
 
 			<dialog className='nav-bar--mobile'>
 				<button
-					id='close-menu-btn'
 					className='close-button'
 					onClick={checkMenuClosed}></button>
-
-				<Link href={'/'} className='nav-bar__button--mobile'>
+				<Link href={'/'} className='nav-bar__mobile-button'>
 					Home
 				</Link>
-				<Link href={'/'} className='nav-bar__button--mobile'>
+				<Link href={'/'} className='nav-bar__mobile-button'>
 					New
 				</Link>
-				<Link href={'/'} className='nav-bar__button--mobile'>
+				<Link href={'/'} className='nav-bar__mobile-button'>
 					Popular
 				</Link>
-				<Link href={'/'} className='nav-bar__button--mobile'>
+				<Link href={'/'} className='nav-bar__mobile-button'>
 					Trending
 				</Link>
-				<Link href={'/'} className='nav-bar__button--mobile'>
+				<Link href={'/'} className='nav-bar__mobile-button'>
 					Categories
 				</Link>
 			</dialog>
