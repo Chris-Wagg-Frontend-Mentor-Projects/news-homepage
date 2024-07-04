@@ -1,6 +1,7 @@
 import AsideCard from './components/AsideCard'
 import ArticleCard from './components/ArticleCard'
 import DesktopNav from './components/DesktopNav'
+import Link from 'next/link'
 
 export default function Home() {
 	return (
@@ -28,9 +29,9 @@ export default function Home() {
 									platforms back into the hands of the people.
 									But is it really fulfilling its promise?
 								</p>
-								<button className='read-more-button'>
+								<Link href='/' className='read-more-button'>
 									READ MORE
-								</button>
+								</Link>
 							</div>
 						</div>
 					</main>

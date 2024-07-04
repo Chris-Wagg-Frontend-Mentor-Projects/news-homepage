@@ -37,6 +37,11 @@ export default function DesktopNav() {
 	return (
 		<>
 			<nav className='nav-bar--desktop'>
+				<button
+					aria-label='open menu'
+					aria-haspopup='dialog'
+					className='hamburger-btn'
+					onClick={checkMenuOpen}></button>
 				<Link href={'/'} className='nav-bar__button--desktop'>
 					Home
 				</Link>
@@ -52,14 +57,11 @@ export default function DesktopNav() {
 				<Link href={'/'} className='nav-bar__button--desktop'>
 					Categories
 				</Link>
-
-				<button
-					className='hamburger-btn'
-					onClick={checkMenuOpen}></button>
 			</nav>
 
 			<dialog className='nav-bar--mobile'>
 				<button
+					aria-label='close menu'
 					className='close-button'
 					onClick={checkMenuClosed}></button>
 				<Link href={'/'} className='nav-bar__mobile-button'>
