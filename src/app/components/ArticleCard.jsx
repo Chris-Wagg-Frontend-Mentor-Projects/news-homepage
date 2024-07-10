@@ -11,11 +11,11 @@ export default function ArticleCard(props) {
 			/>
 			<div className='article-card__text-container'>
 				<span className='article-card__number'>{articleNumber}</span>
-				<h3>
+				<h4>
 					<Link href='/' className='article-card__title'>
 						{title}
 					</Link>
-				</h3>
+				</h4>
 				<p className='article-card__text'>{text}</p>
 			</div>
 		</article>

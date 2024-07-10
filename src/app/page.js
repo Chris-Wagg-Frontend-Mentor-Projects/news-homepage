@@ -11,17 +11,19 @@ export default function Home() {
 					<img src='./logo.svg' alt='' />
 					<DesktopNav />
 				</header>
+				<h1 className='hidden-heading'>Welcome to web news!</h1>
 				<section className='body-container' id='body-container'>
 					<main className='main-article'>
+						<h2 className='hidden-heading'>Main article</h2>
 						<img
 							src='./image-web-3-desktop.jpg'
 							alt=''
 							className='main-article__image'
 						/>
 						<div className='main-article-wrapper'>
-							<h1 className='main-article__headline'>
+							<h3 className='main-article__headline'>
 								The Bright Future of Web 3.0?
-							</h1>
+							</h3>
 							<div className='main-article__descrpition'>
 								<p>
 									We dive into the next evolution of the web
@@ -36,7 +38,10 @@ export default function Home() {
 						</div>
 					</main>
 					<aside className='aside-container'>
-						<h2 className='aside__title'>New</h2>
+						{/* TODO: fix heading levels for the aside cards */}
+						<h2 className='aside__title' aria-label='New articles'>
+							New
+						</h2>
 						<AsideCard
 							title={`Hydrogen VS Electric Cars`}
 							text={`'Will hydrogen-fueled cars ever catch up to EVs?'`}
@@ -51,6 +56,7 @@ export default function Home() {
 						/>
 					</aside>
 					<section className='articles-container'>
+						<h2 className='hidden-heading'>More articles</h2>
 						<ArticleCard
 							articleImage='image-retro-pcs'
 							articleAlt=''
