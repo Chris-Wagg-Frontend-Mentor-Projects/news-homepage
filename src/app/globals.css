@@ -107,6 +107,16 @@ html {
 
 /* utility classes */
 
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+	margin: 2rem 0;
+}
+
 .hidden-heading {
 	clip: rect(1px 1px 1px 1px); /* IE 6/7 */
 	clip: rect(1px, 1px, 1px, 1px);
@@ -190,7 +200,7 @@ dialog[open]::backdrop {
 
 .nav-bar--mobile {
 	flex-direction: column;
-	gap: 2rem;
+
 	position: fixed;
 	/* need inset rule to allow position to work */
 	inset: unset;

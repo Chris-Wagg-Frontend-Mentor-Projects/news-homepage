@@ -60,25 +60,38 @@ export default function DesktopNav() {
 			</nav>
 
 			<dialog className='nav-bar--mobile'>
-				<button
-					aria-label='close menu'
-					className='close-button'
-					onClick={checkMenuClosed}></button>
-				<Link href={'/'} className='nav-bar__mobile-button'>
-					Home
-				</Link>
-				<Link href={'/'} className='nav-bar__mobile-button'>
-					New
-				</Link>
-				<Link href={'/'} className='nav-bar__mobile-button'>
-					Popular
-				</Link>
-				<Link href={'/'} className='nav-bar__mobile-button'>
-					Trending
-				</Link>
-				<Link href={'/'} className='nav-bar__mobile-button'>
-					Categories
-				</Link>
+				<ul>
+					<button
+						aria-label='close menu'
+						className='close-button'
+						onClick={checkMenuClosed}></button>
+
+					<li>
+						<Link href={'/'} className='nav-bar__mobile-button'>
+							Home
+						</Link>
+					</li>
+					<li>
+						<Link href={'/'} className='nav-bar__mobile-button'>
+							New
+						</Link>
+					</li>
+					<li>
+						<Link href={'/'} className='nav-bar__mobile-button'>
+							Popular
+						</Link>
+					</li>
+					<li>
+						<Link href={'/'} className='nav-bar__mobile-button'>
+							Trending
+						</Link>
+					</li>
+					<li>
+						<Link href={'/'} className='nav-bar__mobile-button'>
+							Categories
+						</Link>
+					</li>
+				</ul>
 			</dialog>
 		</>
 	)
