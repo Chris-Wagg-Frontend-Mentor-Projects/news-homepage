@@ -10,12 +10,14 @@ export default function ArticleCard(props) {
 				className='article-card__image'
 			/>
 			<div className='article-card__text-container'>
-				<span className='article-card__number'>{articleNumber}</span>
-				<h4>
+				<span aria-label='' className='article-card__number'>
+					{articleNumber}
+				</span>
+				<h3>
 					<Link href='/' className='article-card__title'>
 						{title}
 					</Link>
-				</h4>
+				</h3>
 				<p className='article-card__text'>{text}</p>
 			</div>
 		</article>

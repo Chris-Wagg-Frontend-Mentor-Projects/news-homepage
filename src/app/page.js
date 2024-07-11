@@ -13,7 +13,10 @@ export default function Home() {
 				</header>
 				<h1 className='hidden-heading'>Welcome to web news!</h1>
 				<section className='body-container' id='body-container'>
-					<main className='main-article'>
+					<main
+						className='main-article'
+						role='heading'
+						aria-level='2'>
 						<h2 className='hidden-heading'>Main article</h2>
 						<img
 							src='./image-web-3-desktop.jpg'
