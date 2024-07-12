@@ -95,7 +95,7 @@ html {
 	--margin-border: 10rem;
 }
 /* grid setup */
-.body-container {
+.main-container {
 	display: grid;
 
 	grid-template-columns: var(--margin-border) [main-start] 2fr [main-end aside-start] 1fr [aside-end] var(
@@ -148,6 +148,17 @@ li {
 .articles-container {
 	grid-column: main-start / aside-end;
 	grid-row: section-two-start / section-two-end;
+}
+
+.skip-link {
+	position: absolute;
+	left: 5px;
+	top: 5px;
+}
+.skip-link:focus {
+	position: absolute;
+	left: 20px;
+	top: 20px;
 }
 
 /* header classes */

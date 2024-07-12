@@ -6,17 +6,20 @@ import Link from 'next/link'
 export default function Home() {
 	return (
 		<>
+			{/* TODO: fix the image alts */}
 			<body>
 				<header className='header'>
+					{/* <div className='skip-link'>
+						<Link href='#main-content'>Skip to main content</Link>
+					</div> */}
+
+					{/* TODO: fix the styling for the skip link */}
 					<img src='./logo.svg' alt='' />
 					<DesktopNav />
 				</header>
-				<h1 className='hidden-heading'>Welcome to web news!</h1>
-				<section className='body-container' id='body-container'>
-					<main
-						className='main-article'
-						role='heading'
-						aria-level='2'>
+				<main className='main-container'>
+					<section id='main-content' className='main-article'>
+						<h1 className='hidden-heading'>Welcome to web news!</h1>
 						<h2 className='hidden-heading'>Main article</h2>
 						<img
 							src='./image-web-3-desktop.jpg'
@@ -39,9 +42,8 @@ export default function Home() {
 								</Link>
 							</div>
 						</div>
-					</main>
+					</section>
 					<aside className='aside-container'>
-						{/* TODO: fix heading levels for the aside cards */}
 						<h2 className='aside__title' aria-label='New articles'>
 							New
 						</h2>
@@ -82,7 +84,7 @@ export default function Home() {
 							text='How the pandemic has sparked fresh opportunities.'
 						/>
 					</section>
-				</section>
+				</main>
 			</body>
 		</>
 	)

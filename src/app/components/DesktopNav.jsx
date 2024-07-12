@@ -60,12 +60,13 @@ export default function DesktopNav() {
 			</nav>
 
 			<dialog className='nav-bar--mobile'>
-				<ul>
+				<div>
 					<button
 						aria-label='close menu'
 						className='close-button'
 						onClick={checkMenuClosed}></button>
-
+				</div>
+				<ul>
 					<li>
 						<Link href={'/'} className='nav-bar__mobile-button'>
 							Home
