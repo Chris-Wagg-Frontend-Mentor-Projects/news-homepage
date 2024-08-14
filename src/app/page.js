@@ -9,18 +9,19 @@ export default function Home() {
 			{/* TODO: fix the image alts */}
 			<body>
 				<header className='header'>
-					{/* <div className='skip-link'>
-						<Link href='#main-content'>Skip to main content</Link>
-					</div> */}
+					<a className='skip-link' href='#main-content'>
+						Skip to main content
+					</a>
 
-					{/* TODO: fix the styling for the skip link */}
 					<img src='./logo.svg' alt='' />
 					<DesktopNav />
 				</header>
 				<main className='main-container'>
-					<section id='main-content' className='main-article'>
-						<h1 className='hidden-heading'>Welcome to web news!</h1>
-						<h2 className='hidden-heading'>Main article</h2>
+					<h1 className='hidden-heading'>Welcome to web news!</h1>
+					<section className='main-article'>
+						<h2 className='hidden-heading' id='main-content'>
+							Main article
+						</h2>
 						<img
 							src='./image-web-3-desktop.jpg'
 							alt=''

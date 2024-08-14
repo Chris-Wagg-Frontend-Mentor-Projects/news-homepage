@@ -152,13 +152,16 @@ li {
 
 .skip-link {
 	position: absolute;
-	left: 5px;
-	top: 5px;
+	left: 10px;
+	top: -100px;
+	transition: 0.15s ease-in-out;
+	text-decoration: none;
 }
 .skip-link:focus {
-	position: absolute;
-	left: 20px;
-	top: 20px;
+	background-color: red;
+	color: white;
+	top: 10px;
+	padding: 10px;
 }
 
 /* header classes */
@@ -187,7 +190,8 @@ li {
 	text-decoration: none;
 }
 
-.nav-bar__button--desktop:hover {
+.nav-bar__button--desktop:hover,
+.nav-bar__button--desktop:focus {
 	color: var(--clr-red);
 }
 
@@ -278,6 +282,7 @@ dialog[open]::backdrop {
 	text-decoration: none;
 	padding: 0.75rem 2.25rem;
 	border: 0;
+	border-radius: 5px;
 	background-color: var(--clr-red);
 	color: var(--clr-very-dark-blue);
 	letter-spacing: 3px;
@@ -285,7 +290,8 @@ dialog[open]::backdrop {
 	font-weight: var(--fw-med);
 }
 
-.read-more-button:hover {
+.read-more-button:hover,
+.read-more-button:focus {
 	background-color: var(--clr-very-dark-blue);
 	color: var(--clr-off-white);
 }
@@ -327,7 +333,8 @@ dialog[open]::backdrop {
 	transition: color 0.15s ease-in-out;
 }
 
-.aside-card__title:hover {
+.aside-card__title:hover,
+.aside-card__title:focus {
 	color: var(--clr-soft-orange);
 }
 .aside-card__text {
@@ -377,7 +384,8 @@ dialog[open]::backdrop {
 	transition: color 0.15s ease-in-out;
 }
 
-.article-card__title:hover {
+.article-card__title:hover,
+.article-card__title:focus {
 	color: var(--clr-red);
 }
 

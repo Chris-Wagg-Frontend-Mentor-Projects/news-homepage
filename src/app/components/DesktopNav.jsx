@@ -19,7 +19,7 @@ export default function DesktopNav() {
 		})
 
 		if (isMenuOpen === true) {
-			document.body.style.overflow = 'hidden visible'
+			document.body.style.overflow = 'hidden'
 			// openBtn.focus()
 		} else if (isMenuOpen === false) {
 			document.body.style.overflow = 'scroll'
@@ -39,7 +39,7 @@ export default function DesktopNav() {
 			<nav className='nav-bar--desktop'>
 				<button
 					aria-label='open menu'
-					aria-haspopup='dialog'
+					// aria-haspopup='dialog'
 					className='hamburger-btn'
 					onClick={checkMenuOpen}></button>
 				<Link href={'/'} className='nav-bar__button--desktop'>
@@ -60,12 +60,12 @@ export default function DesktopNav() {
 			</nav>
 
 			<dialog className='nav-bar--mobile'>
-				<div>
-					<button
-						aria-label='close menu'
-						className='close-button'
-						onClick={checkMenuClosed}></button>
-				</div>
+				<button
+					// aria-label='close menu'
+					className='close-button'
+					onClick={checkMenuClosed}>
+					Close menu
+				</button>
 				<ul>
 					<li>
 						<Link href={'/'} className='nav-bar__mobile-button'>
