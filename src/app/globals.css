@@ -127,9 +127,9 @@ li {
 	width: 1px;
 }
 
-.nav-bar__button {
+.nav-bar__button--desktop {
 	text-decoration: none;
-	color: var(--clr-gray-blue);
+	color: var(--clr-dark-gray-blue);
 }
 .nav-bar__button:hover {
 	color: var(--clr-red);

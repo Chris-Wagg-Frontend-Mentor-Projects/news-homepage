@@ -42,21 +42,33 @@ export default function DesktopNav() {
 					// aria-haspopup='dialog'
 					className='hamburger-btn'
 					onClick={checkMenuOpen}></button>
-				<Link href={'/'} className='nav-bar__button--desktop'>
-					Home
-				</Link>
-				<Link href={'/'} className='nav-bar__button--desktop'>
-					New
-				</Link>
-				<Link href={'/'} className='nav-bar__button--desktop'>
-					Popular
-				</Link>
-				<Link href={'/'} className='nav-bar__button--desktop'>
-					Trending
-				</Link>
-				<Link href={'/'} className='nav-bar__button--desktop'>
-					Categories
-				</Link>
+				<ul>
+					<li>
+						<Link href={'/'} className='nav-bar__button--desktop'>
+							Home
+						</Link>
+					</li>
+					<li>
+						<Link href={'/'} className='nav-bar__button--desktop'>
+							New
+						</Link>
+					</li>
+					<li>
+						<Link href={'/'} className='nav-bar__button--desktop'>
+							Popular
+						</Link>
+					</li>
+					<li>
+						<Link href={'/'} className='nav-bar__button--desktop'>
+							Trending
+						</Link>
+					</li>
+					<li>
+						<Link href={'/'} className='nav-bar__button--desktop'>
+							Categories
+						</Link>
+					</li>
+				</ul>
 			</nav>
 
 			<dialog className='nav-bar--mobile'>
