@@ -172,12 +172,6 @@ li {
 	margin: 3rem var(--margin-border);
 }
 
-.nav-bar--desktop {
-	display: flex;
-	gap: 3rem;
-	align-items: center;
-}
-
 /* desktop nav */
 
 .hamburger-btn {
@@ -193,6 +187,11 @@ li {
 .nav-bar__button--desktop:hover,
 .nav-bar__button--desktop:focus {
 	color: var(--clr-red);
+}
+
+.desktop-nav-list {
+	display: flex;
+	gap: 3rem;
 }
 
 /* mobile nav */
