@@ -13,7 +13,7 @@ export default function Home() {
 						Skip to main content
 					</a>
 
-					<img src='./logo.svg' alt='' />
+					<img src='./logo.svg' alt='' className='logo-svg' />
 					<DesktopNav />
 				</header>
 				<main className='main-container'>

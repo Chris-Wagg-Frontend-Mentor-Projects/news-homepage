@@ -107,6 +107,10 @@ html {
 
 /* utility classes */
 
+.logo-svg {
+	align-self: center;
+}
+
 ul {
 	margin: 0;
 	padding: 0;
